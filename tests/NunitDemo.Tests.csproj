@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+
+    <!-- class libraries do not copy NuGet dependencies to bin/ by default;
+         the console runner needs nunit.framework.dll next to the assembly -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.14.0" />
+
+    <!-- tool package: restores nunit3-console into the NuGet cache
+         without adding compile references -->
+    <PackageReference Include="NUnit.ConsoleRunner.NetCore" Version="3.22.0"
+                      ExcludeAssets="all" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

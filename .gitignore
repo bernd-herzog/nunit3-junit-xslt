@@ -1,0 +1,5 @@
+bin/
+obj/
+TestResult.xml
+junit-*.xml
+!junit-example.xml

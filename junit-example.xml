@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="My.Tests.Foo" package="My.Tests" id="0" hostname="agent-01" tests="2" failures="1" errors="0" skipped="0" time="0.123" timestamp="2026-11-25T12:00:00">
+    <properties/>
+    <testcase classname="My.Tests.Foo" name="Passes" time="0.01"/>
+    <testcase classname="My.Tests.Foo" name="Fails" time="0.11">
+      <failure message="expected 1 but was 2" type="AssertionError">stack trace here</failure>
+    </testcase>
+    <system-out>hello</system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>
